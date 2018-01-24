@@ -19,6 +19,23 @@ THIN=`pwd`/"thin"
 
 CONFIGURE_FLAGS="--enable-cross-compile --disable-debug --disable-programs \
                  --disable-doc --enable-pic"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-avdevice"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-swresample"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-swscale"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-postproc"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-avfilter"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-network"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-pixelutils"
+# CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-everything"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --enable-encoder=h264"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --enable-muxer=hls"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --enable-muxer=hash"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --enable-protocol=file"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-avfoundation"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-coreimage"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-securetransport"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-audiotoolbox"
+CONFIGURE_FLAGS="$CONFIGURE_FLAGS --disable-videotoolbox"
 
 if [ "$X264" ]
 then
